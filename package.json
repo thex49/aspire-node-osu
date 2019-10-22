@@ -1,0 +1,37 @@
+{
+  "name": "aspire-node-osu",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "license": "MIT",
+  "scripts": {
+    "run-client": "cd client && npm run start",
+    "client-install": "cd client && npm install",
+    "build-server": "tsc",
+    "run-server": "npm run build-server && cd dist && node server.js",
+    "run-server-watch": "concurrently \"tsc -w\" \"cd dist && nodemon server.js\"",
+    "dev": "concurrently \"npm run run-server-watch\" \"npm run run-client\""
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/express": "^4.16.0",
+    "@types/express-session": "^1.15.11",
+    "@types/js-yaml": "^3.11.4",
+    "@types/mime": "^2.0.0",
+    "@types/node": "^10.12.18",
+    "@types/passport": "^1.0.0",
+    "@types/range-parser": "^1.2.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "js-yaml": "^3.12.1",
+    "passport": "^0.4.0",
+    "typescript": "^3.2.2"
+  },
+  "author": "thex49 (aspireworld@protonmail.com)"
+}
